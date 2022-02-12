@@ -70,7 +70,7 @@ previous.addEventListener('click', () => {
 })
 
 audioNode.addEventListener('ended', () => {
-        const audioIndex = parseInt(currentAudio) > 0 ? parseInt(currentAudio) + 1 : 0
+        const audioIndex = parseInt(currentAudio) < audios.length - 1 ? parseInt(currentAudio) + 1 : 0
             // console.log(audios[parseInt(currentAudio) + 1].children[1].getAttribute('href'))
         const audioUrl = audios[audioIndex].children[1].getAttribute('href');
         // console.log(audioUrl)
