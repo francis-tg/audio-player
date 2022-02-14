@@ -15,7 +15,7 @@ for (const item in audios) {
         audio.children[1].addEventListener('click', (e) => {
             e.preventDefault();
             currentAudio = item
-            audioNode.setAttribute('src', getAudioUrl)
+            audioNode.setAttribute('src', '.' + getAudioUrl)
             audioNode.play()
             playBtn.innerHTML = `<i class="feather pause icon-pause"></i>`
         }, false)
@@ -50,7 +50,7 @@ next.addEventListener('click', () => {
     const audioUrl = audios[audioIndex].children[1].getAttribute('href');
     // console.log(audioUrl)
     currentAudio = audioIndex;
-    audioNode.setAttribute('src', audioUrl)
+    audioNode.setAttribute('src', '.' + audioUrl)
     audioNode.play()
     playBtn.innerHTML = ``
     playBtn.innerHTML = `<i class="feather play icon-play"></i>`
@@ -63,7 +63,7 @@ previous.addEventListener('click', () => {
     const audioUrl = audios[audioIndex].children[1].getAttribute('href');
     // console.log(audioUrl)
     currentAudio = audioIndex;
-    audioNode.setAttribute('src', audioUrl)
+    audioNode.setAttribute('src', '.' + audioUrl)
     audioNode.play()
     playBtn.innerHTML = ``
     playBtn.innerHTML = `<i class="feather pause icon-pause"></i>`
@@ -75,7 +75,7 @@ audioNode.addEventListener('ended', () => {
         const audioUrl = audios[audioIndex].children[1].getAttribute('href');
         // console.log(audioUrl)
         currentAudio = audioIndex;
-        audioNode.setAttribute('src', audioUrl)
+        audioNode.setAttribute('src', '.' + audioUrl)
         audioNode.play()
         playBtn.innerHTML = ``
         playBtn.innerHTML = `<i class="feather pause icon-play"></i>`
