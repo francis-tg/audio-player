@@ -41,11 +41,31 @@ body {
         flex-direction: column-reverse;
         width: 80%;
         .progress-bar {
-            input[type="range"] {
-                width: 100%;
-                transform: translateX(50px);
+            // input[type="range"] {
+            //     width: 100%;
+            //     transform: translateX(50px);
+            //     background: var(--bg-color);
+            //     color:  #eab676;
+            //     cursor: pointer;
+            // }
+            border: 1px solid var(--bg-color);
+            transform: translateX(50px);
+            position: relative;
+            width: 100%;
+            height: 11px;
+            border-radius: 10px;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            .progress{
+                width: 0%;
+                position: absolute;
                 background-color: var(--bg-color);
-                color: #eab676;
+                height: 10px;
+                // transform: translateX(50px);
+                cursor: pointer;
+                border-radius: 10px;
             }
         }
         .control {
@@ -84,7 +104,40 @@ body {
                     cursor: pointer;
                 }
             }
+            .volume{
+                color: var(--bg-color);
+                font-size: 2rem;
+                margin: 0 30px;
+                
+            }
+            .icon-folder{
+                color: var(--bg-color);
+                font-size: 2rem;
+                margin:0 20px;
+            }
         }
+        #volume-progressBar{
+            position: absolute;
+        top: 10px;
+            margin-left: 10px;
+        width: 80px;
+        height: 8px;
+        background-color: #666666;
+        border-radius: 10px;
+        display: inline-block;
+        &:hover{
+            cursor: pointer;
+        }
+        }
+        #myVolume {
+            width: 10%;
+            height: 100%;
+            background-color: var(--bg-color); 
+            border-radius: 10px;
+            display:block;
+            border: 0;
+        }
+        
     }
     .playlists {
         padding: 10px;
@@ -128,5 +181,7 @@ body {
 @media screen and (max-width:780px) {
     .player {
         transform: translate(0, 100px);
+        width: 100%;
+        height: 100%;
     }
 }

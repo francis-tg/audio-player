@@ -1,0 +1,20 @@
+{
+  "name": "musik-player",
+  "version": "1.0.0",
+  "description": "<img src='./Capture d’écran 2022-02-12 214516.jpg'>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/francis-tg/audio-player.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/francis-tg/audio-player/issues"
+  },
+  "homepage": "https://github.com/francis-tg/audio-player#readme"
+}
